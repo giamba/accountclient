@@ -38,7 +38,7 @@ This is my first project in Go.
 package main
 import (
 	"fmt"
-	"bitbucket.org/giamba/accountclient/client"
+	"github.com/giamba/accountclient/client"
 )
 
 func main() {

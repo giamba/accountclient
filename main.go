@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"bitbucket.org/giamba/accountclient/client"
+	"github.com/giamba/accountclient/client"
 	guuid "github.com/google/uuid"
 )
 

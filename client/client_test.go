@@ -3,7 +3,7 @@ package client_test
 import (
 	"os"
 
-	"bitbucket.org/giamba/accountclient/client"
+	"github.com/giamba/accountclient/client"
 	guuid "github.com/google/uuid"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
