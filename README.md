@@ -43,8 +43,8 @@ import (
 
 func main() {
 
-    var apiEndpoint = "http://localhost:8080"
-	var accessToken = "8fb95528-57c6-422e-9722-d2147bcba8ed"
+  var apiEndpoint = "http://localhost:8080"
+  var accessToken = "8fb95528-57c6-422e-9722-d2147bcba8ed"
 
 	var client = client.NewClient(apiEndpoint, accessToken)
 

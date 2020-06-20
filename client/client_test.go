@@ -21,8 +21,8 @@ func getApiUrl() string {
 }
 
 //Create Tests
-var _ = Describe("Given an accout to create", func() {
-	Context("When submit a new valid accout", func() {
+var _ = Describe("Given an account to create", func() {
+	Context("When submit a new valid account", func() {
 		newAccountId := guuid.New().String()
 		c := client.NewClient(apiUrl, token)
 		result, err := c.Create(client.CreateRequest{
@@ -42,13 +42,13 @@ var _ = Describe("Given an accout to create", func() {
 			Expect(err).NotTo(HaveOccurred())
 		})
 
-		It("the accoutId shold be correct", func() {
+		It("the accountId shold be correct", func() {
 			Expect(result.Data.Id).To(Equal(newAccountId))
 			Expect(err).NotTo(HaveOccurred())
 		})
 	})
 
-	Context("When submit an existing accout", func() {
+	Context("When submit an existing account", func() {
 		accountId := guuid.New().String()
 		createAccountUtil(accountId)
 		c := client.NewClient(apiUrl, token)
@@ -70,7 +70,7 @@ var _ = Describe("Given an accout to create", func() {
 			Expect(err).NotTo(HaveOccurred())
 		})
 
-		It("the accoutId shold be empty", func() {
+		It("the accountId shold be empty", func() {
 			Expect(result.Data.Id).To(Equal(""))
 			Expect(err).NotTo(HaveOccurred())
 		})
@@ -95,7 +95,7 @@ var _ = Describe("Given an accout to create", func() {
 			Expect(err).NotTo(HaveOccurred())
 		})
 
-		It("the accoutId shold be empty", func() {
+		It("the accountId shold be empty", func() {
 			Expect(result.Data.Id).To(Equal(""))
 			Expect(err).NotTo(HaveOccurred())
 		})
@@ -103,7 +103,7 @@ var _ = Describe("Given an accout to create", func() {
 })
 
 //Delete tests
-var _ = Describe("Given an accout to delete", func() {
+var _ = Describe("Given an account to delete", func() {
 	Context("When submit a delete request", func() {
 		accountId := guuid.New().String()
 		createAccountUtil(accountId)
@@ -131,7 +131,7 @@ var _ = Describe("Given an accout to delete", func() {
 })
 
 //Fetch tests
-var _ = Describe("Given an accout to retrieve", func() {
+var _ = Describe("Given an account to retrieve", func() {
 	Context("When submit a valid fetch request", func() {
 		accountId := guuid.New().String()
 		createAccountUtil(accountId)
@@ -144,7 +144,7 @@ var _ = Describe("Given an accout to retrieve", func() {
 			Expect(err).NotTo(HaveOccurred())
 		})
 
-		It("the accoutId shold be correct", func() {
+		It("the accountId shold be correct", func() {
 			Expect(result.Data.Id).To(Equal(accountId))
 		})
 	})
