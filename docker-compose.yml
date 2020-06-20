@@ -58,13 +58,13 @@ services:
     expose:
       - 8200
 
-  # client-tests:
-  #   container_name: ac_tests
-  #   build: 
-  #     context: ./docker-tests
-  #     dockerfile: Dockerfile
-  #   networks:
-  #     - test-network       
+  client-tests:
+    container_name: ac_tests
+    build: 
+      context: ./docker-tests
+      dockerfile: Dockerfile
+    networks:
+      - test-network       
       
 networks: 
   test-network:
